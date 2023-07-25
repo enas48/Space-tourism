@@ -127,8 +127,11 @@ header .close {
     display: none;
     padding-top: 2rem;
   }
+  header  nav .close{
+    display: none;
+  }
 
-  header nav.active ul {
+  header nav.active ul,header  nav.active .close {
     display: block;
   }
 
@@ -254,26 +257,18 @@ header .close {
   transition: all ease-in 0.2s;
   outline: none;
   cursor: pointer;
+  border: 30px solid transparent;
+  margin-bottom: 20px;
 }
 
 .explore:hover {
-  width: 340px;
-  height: 340px;
-  background: var(--gray);
+  height: 274px;
+  width: 274px;
+  border: 30px solid var(--gray);
+  transform: scale(1.2);
+  font-size: 27px;
 }
 
-.explore:hover::before {
-  border-radius: 50%;
-  z-index: -1;
-  content: '';
-  position: absolute;
-  height: 250px;
-  width: 250px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background: var(--white);
-}
 
 .home .content{
   min-height: 81vh;
@@ -286,6 +281,29 @@ header .close {
   .home {
     background: url('./assets/home/background-home-tablet.jpg');
   }
+  .head5{
+    font-size: 20px;
+  }
+  .home .body-text{
+    width: 72%;
+    margin: auto;
+    font-size: 16px;
+  }
+  .explore {
+    height: 263px;
+    width: 263px;
+    font-size: 32px;
+    border: 15px solid transparent;
+  }
+  
+  .explore:hover {
+    height: 263px;
+    width: 263px;
+    border: 15px solid var(--gray);
+    transform: scale(1.2);
+    font-size: 30px;
+    /* background: var(--gray); */
+  }
 }
 
 @media screen and (max-width:576px) {
@@ -295,6 +313,28 @@ header .close {
   .head1 {
     font-family: 'Bellefair', serif;
     font-size: 80px;
+  }
+  .head5{
+    font-size: 16px;
+  }
+  .explore {
+    height: 150px;
+    width: 150px;
+    font-size: 20px;
+    border: 15px solid transparent;
+  }
+  
+  .explore:hover {
+    height: 150px;
+    width: 150px;
+    border: 15px solid var(--gray);
+    transform: scale(1.2);
+    font-size: 18px;
+    /* background: var(--gray); */
+  }
+  .home .body-text{
+    font-size: 15px;
+    width: 96%;
   }
   
 }
