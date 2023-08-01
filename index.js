@@ -37,16 +37,17 @@ let destNavContent = Data.destinations.map((item, i) => {
 let destContent=  Data.destinations.map((item, i) => {
   return (i === 0) ? `  <div class="tab-pane fade  show active" id="${item.name.toLowerCase()}" role="tabpanel" aria-labelledby="${item.name.toLowerCase()}-tab">
   <div class="row">
-     <div class="col-lg-6">
-         <img src="${item.images.png}" class="img-fluid" />
+     <div class="col-lg-6 text-center">
+         <img src="${item.images.png}" class="img-fluid dest-img" />
      </div>
-     <div class="col-lg-5 offset-lg-1 text-center text-lg-left">
+     <div class="col-lg-5 offset-lg-1 text-center text-lg-left mt-3 mt-lg-0">
+    
          <h1 class="head2 mb-3">${item.name.toUpperCase()}</h1>
          <p class="body-text mb-5">
              ${item.description}
          </p>
          <div class="hr"></div>
-         <div class="mt-3 d-flex info">
+         <div class="mt-3 d-flex info justify-content-center justify-content-lg-start">
              <div class="">
                  <span class="subhead2 d-inline-block mb-2">AVG. DISTANCE</span><br />
                  <span class="subhead1">${item.distance}</span>
@@ -62,16 +63,17 @@ let destContent=  Data.destinations.map((item, i) => {
 
 `<div class="tab-pane fade " id="${item.name.toLowerCase()}" role="tabpanel" aria-labelledby="${item.name.toLowerCase()}-tab">
     <div class="row">
-    <div class="col-lg-6">
-        <img src="${item.images.png}" class="img-fluid" />
+    <div class="col-lg-6 text-center">
+        <img src="${item.images.png}" class="img-fluid dest-img" />
     </div>
-    <div class="col-lg-5 offset-lg-1 text-center text-lg-left">
+    <div class="col-lg-5 offset-lg-1 text-center text-lg-left mt-3 mt-lg-0" >
+  
         <h1 class="head2 mb-3">${item.name.toUpperCase()}</h1>
         <p class="body-text mb-5">
             ${item.description}
         </p>
         <div class="hr"></div>
-        <div class="mt-3 d-flex info">
+        <div class="mt-3 d-flex info justify-content-center justify-content-lg-start">
             <div class="">
                 <span class="subhead2 d-inline-block mb-2">AVG. DISTANCE</span><br />
                 <span class="subhead1">${item.distance}</span>
@@ -86,6 +88,6 @@ let destContent=  Data.destinations.map((item, i) => {
  </div>`;
 }).join('');
 
-destinationNav.insertAdjacentHTML('beforeend', destNavContent);
-destinationContent.insertAdjacentHTML('beforeend', destContent);
 
+destinationContent.insertAdjacentHTML('beforeend', destContent);
+destinationNav.insertAdjacentHTML('beforeend', destNavContent);

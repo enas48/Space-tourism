@@ -270,15 +270,8 @@ header .close {
 .explore:focus {
   outline: 0;
 }
-/* .explore:hover {
-  height: 274px;
-  width: 274px;
-  border: 30px solid var(--gray);
-  transform: scale(1.2);
-  font-size: 27px;
-} */
-.btn-style{
-  /* display: none; */
+
+.btn-style {
   width: 100%;
   height: 100%;
   background-color: red;
@@ -287,9 +280,9 @@ header .close {
   border-radius: 50%;
   top: 0;
   left: 0;
-display: block;
-background: #9797970f;
-backdrop-filter: blur(2px);
+  display: block;
+  background: #9797970f;
+  backdrop-filter: blur(2px);
   position: absolute;
   height: 274px;
   width: 274px;
@@ -302,11 +295,14 @@ backdrop-filter: blur(2px);
   height: 100%;
   display: flex;
   align-items: center;
+  padding-bottom: 2rem;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
   .home {
     background: url('./assets/home/background-home-tablet.jpg');
+    background-size: cover;
   }
 
   .head5 {
@@ -338,6 +334,7 @@ backdrop-filter: blur(2px);
 @media screen and (max-width: 576px) {
   .home {
     background: url('./assets/home/background-home-mobile.jpg');
+      background-size: cover;
   }
 
   .head1 {
@@ -381,7 +378,7 @@ backdrop-filter: blur(2px);
 
 .nav-tabs {
   border-bottom: none;
-  gap: 25px;
+  gap: 15px;
   margin-bottom: 3rem;
   padding: 0 15px;
 }
@@ -390,6 +387,7 @@ backdrop-filter: blur(2px);
 .nav-tabs .nav-link {
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .nav-link:focus {
@@ -401,7 +399,6 @@ backdrop-filter: blur(2px);
   background: none;
   border: none;
   position: relative;
-  /* border-bottom: 3px solid var(--white); */
 }
 
 .nav-tabs .nav-link.active::after {
@@ -412,7 +409,19 @@ backdrop-filter: blur(2px);
   left: 1rem;
   width: calc(100% - 2rem);
   background-color: var(--white);
-  /* border-bottom: 3px solid var(--white); */
+}
+.nav-tabs .nav-link:hover {
+  position: relative;
+}
+.nav-tabs .nav-link:hover::after {
+  position: absolute;
+  content: '';
+  height: 3px;
+  bottom: 0;
+  left: 1rem;
+  width: calc(100% - 2rem);
+  background-color: var(--light-gray);
+
 }
 
 .hr {
@@ -424,12 +433,6 @@ backdrop-filter: blur(2px);
   gap: 5rem;
 }
 
-/* .info>* :first-child {
-  color: var(--secondary);
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  letter-spacing:  2.35px;
-} */
 
 .destination .head5 {
   color: var(--white);
@@ -440,14 +443,47 @@ backdrop-filter: blur(2px);
 @media screen and (max-width: 768px) {
   .destination {
     background: url('./assets/destination/background-destination-tablet.jpg');
+    background-size: cover;
   }
+  .destination .nav-tabs{
+    position: relative;
+    top: 26rem;
+    z-index: 4;
+  }
+  .destination .dest-img{
+    position: relative;
+    top: -6rem;
+    width: 58%;
+  }
+  .destination  .body-text {
+    width: 90%;
+    margin: auto;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 670px) {
+
+  .destination .nav-tabs{
+    position: relative;
+    top: 19rem;
+    z-index: 4;
+  }
+  .destination .dest-img{
+    position: relative;
+    top: -6rem;
+    width: 58%;
+  }
+
 }
 
 @media screen and (max-width: 576px) {
   .destination {
     background: url('./assets/destination/background-destination-mobile.jpg');
+    background-size: cover;
   }
 }
+
 
 /*crew page*/
 .crew {
@@ -461,16 +497,19 @@ backdrop-filter: blur(2px);
 @media screen and (max-width: 768px) {
   .crew {
     background: url('./assets/crew/background-crew-tablet.jpg');
+    background-size: cover;
   }
 }
 
 @media screen and (max-width: 576px) {
   .crew {
     background: url('./assets/crew/background-crew-mobile.jpg');
+    background-size: cover;
   }
 }
+/*-----------------------------------technology page---------------------------------------*/
 
-/*technology page*/
+
 .technology {
   background-image: url('./assets/technology/background-technology-desktop.jpg');
   background-size: cover;
@@ -482,11 +521,13 @@ backdrop-filter: blur(2px);
 @media screen and (max-width: 768px) {
   .technology {
     background: url('./assets/technology/background-technology-tablet.jpg');
+    background-size: cover;
   }
 }
 
 @media screen and (max-width: 576px) {
   .technology {
     background: url('./assets/technology/background-technology-mobile.jpg');
+    background-size: cover;
   }
 }
