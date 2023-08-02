@@ -1,69 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Space tourism | Technology</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon-32x32.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="./style.css" rel="stylesheet" />
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="loader">
-        <img src="./assets/giphy.gif" alt="load" />
+      <img src="./assets/giphy.gif" alt="load" />
     </div>
     <div class="technology">
-        <header>
-            <img class="logo" src="./assets/shared/logo.svg" alt="logo" />
-            <span class="line"></span>
-            <nav>
-                <img id="close_menu" class="close" src="./assets/shared/icon-close.svg" alt="close" />
-                <ul>
+      <header>
+        <img class="logo" src="./assets/shared/logo.svg" alt="logo" />
+        <span class="line"></span>
+        <nav>
+          <img
+            id="close_menu"
+            class="close"
+            src="./assets/shared/icon-close.svg"
+            alt="close"
+          />
+          <ul>
+            <li class="nav-link ">
+              <a href="/"> <span>00</span>&nbsp;&nbsp;HOME </a>
+            </li>
+            <li class="nav-link">
+              <a href="/destination.html">
+                <span>01</span>&nbsp;&nbsp;DESTINATION
+              </a>
+            </li>
+            <li class="nav-link">
+              <a href="/crew.html"> <span>02</span>&nbsp;&nbsp;CREW </a>
+            </li>
+            <li class="nav-link active">
+              <a href="/technology.html">
+                <span>03</span>&nbsp;&nbsp;TECHNOLOGY
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <img
+          id="open_menu"
+          class="hamburger"
+          src="./assets/shared/icon-hamburger.svg"
+          alt="hamburger"
+        />
+      </header>
+      <div style="overflow-x: hidden">
+      <div class="row ">
+        <h5 class="head5  col-12 px-5">
+            <span class="num">03</span>SPACE LAUNCH 101
+          </h5>
+      </div>
+        <div class="row m-0 w-100 align-items-center justify-content-end">
+      
+          <div class="col-lg-1 mb-3 p-0">
+            <ul class="nav nav-pills flex-lg-column justify-content-center" id="techNav" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="home-tab"
+                  data-toggle="tab"
+                  href="#home"
+                  role="tab"
+                  aria-controls="home"
+                  aria-selected="true"
+                  >1</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="profile-tab"
+                  data-toggle="tab"
+                  href="#profile"
+                  role="tab"
+                  aria-controls="profile"
+                  aria-selected="false"
+                  >2</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="contact-tab"
+                  data-toggle="tab"
+                  href="#contact"
+                  role="tab"
+                  aria-controls="contact"
+                  aria-selected="false"
+                  >3</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- /.col-md-4 -->
+          <div class="p-0 tech-content ">
+            <div class="tab-content" id="techContent">
+              <div
+                class="tab-pane fade show active"
+                id="home"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+              >
+                <div class="row align-items-center m-0">
+                    <div class="col-lg-6 order-lg-6 ">
+                        <img
+                        class="img-fluid desktopimg ml-auto"
+                          src="./assets/technology/image-space-capsule-portrait.jpg"
+                        />
+                        <img
+                        class="img-fluid ipadimg"
+                          src="./assets/technology/image-space-capsule-landscape.jpg"
+                        />
+                      </div>
+                  <div class="col-lg-6 order-lg-1 tech-text">
+                    <h3 class="subhead3">Home</h3>
+                    <h3 class="head3">spaceport</h3>
+                    <p class="body-text">
+                      A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.
+                    </p>
+                  </div>
                 
-                    <li class="nav-link ">
-                        <a href="/">
-                            <span>00</span>&nbsp;&nbsp;HOME
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/destination.html">
-                            <span>01</span>&nbsp;&nbsp;DESTINATION
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="/crew.html">
-                            <span>02</span>&nbsp;&nbsp;CREW
-                        </a>
-                    </li>
-                    <li class="nav-link active">
-                        <a href="/technology.html">
-                            <span>03</span>&nbsp;&nbsp;TECHNOLOGY
-                        </a>
-                    </li>
-                </ul>
-
-            </nav>
-            <img id="open_menu" class="hamburger" src="./assets/shared/icon-hamburger.svg" alt="hamburger" />
-        </header>
-        <div class="container">
-
+                </div>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="profile"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+              >
+                <h2 class="subhead3">Profile</h2>
+                <h3 class="head3">spaceport</h3>
+                <p class="body-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Neque, eveniet earum. Sed accusantium eligendi molestiae quo
+                  hic velit nobis et, tempora placeat ratione rem blanditiis
+                  voluptates vel ipsam? Facilis, earum!
+                </p>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="contact"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+              >
+                <h2 class="subhead3">Contact</h2>
+                <h3 class="head3">spaceport</h3>
+                <p class="body-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Neque, eveniet earum. Sed accusantium eligendi molestiae quo
+                  hic velit nobis et, tempora placeat ratione rem blanditiis
+                  voluptates vel ipsam? Facilis, earum!
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-md-8 -->
         </div>
-
+      </div>
     </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
-        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+      integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <script src="./index.js" type="module"></script>
-</body>
-
+  </body>
 </html>
