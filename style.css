@@ -1,7 +1,8 @@
-/*main style*/
+/*-------------main style-------------------*/
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -18,13 +19,67 @@ body {
   color: var(--white);
   font-family: 'Barlow', sans-serif;
   font-size: 18px;
-  /* font-family: 'Barlow Condensed', sans-serif;
-  font-family: 'Bellefair', serif; */
 }
 
-/*shared*/
+/*---------------------typography style---------------------*/
+.head1 {
+  font-family: 'Bellefair', serif;
+  font-size: 150px;
+}
+
+.head2 {
+  font-family: 'Bellefair', serif;
+  font-size: 100px;
+}
+
+.head3 {
+  font-family: 'Bellefair', serif;
+  font-size: 56px;
+  text-transform: uppercase;
+}
+
+.head4 {
+  font-family: 'Bellefair', serif;
+  font-size: 32px;
+}
+
+.head5 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  letter-spacing: 4.75px;
+  color: var(--white);
+  text-transform: uppercase;
+  padding: 0;
+  padding-top: 2rem;
+}
+
+.subhead1 {
+  font-family: 'Bellefair', serif;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.subhead2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  letter-spacing: 2.36px;
+  color: var(--secondary);
+}
+
+.subhead3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 16px;
+  letter-spacing: 2.7px;
+  color: var(--secondary);
+}
+
+.body-text {
+  color: var(--secondary);
+  font-size: 18px;
+}
+
+/*----------------------------shared-------------------------*/
 header {
-  padding: 3rem;
   padding-right: 0;
   display: flex;
   align-items: center;
@@ -78,10 +133,12 @@ header .hamburger,
 header .close {
   display: none;
 }
+header img {
+  padding: 3rem;
+}
 
 @media screen and (max-width: 768px) {
   header {
-    padding-top: 0;
     gap: 10px;
     justify-content: space-between;
   }
@@ -99,7 +156,10 @@ header .close {
   header {
     padding: 1rem;
   }
-
+  header img {
+    padding: 0;
+    width: 40px;
+  }
   header nav {
     transform: translateX(100%);
     padding: 0;
@@ -141,11 +201,12 @@ header .close {
   header .close {
     cursor: pointer;
     display: block;
-    width: 18px;
+    width: 24px;
   }
 
   header .close {
     align-self: flex-end;
+    width: 19px;
   }
 
   header .nav-link.active a,
@@ -154,63 +215,7 @@ header .close {
   }
 }
 
-/*typography style*/
-.head1 {
-  font-family: 'Bellefair', serif;
-  font-size: 150px;
-}
-
-.head2 {
-  font-family: 'Bellefair', serif;
-  font-size: 100px;
-}
-
-.head3 {
-  font-family: 'Bellefair', serif;
-  font-size: 56px;
-  text-transform: uppercase;
-}
-
-.head4 {
-  font-family: 'Bellefair', serif;
-  font-size: 32px;
-}
-
-.head5 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 28px;
-  letter-spacing: 4.75px;
-  color: var(--white);
-  text-transform: uppercase;
-  padding: 0;
-}
-
-.subhead1 {
-  font-family: 'Bellefair', serif;
-  font-size: 28px;
-  text-transform: uppercase;
-}
-
-.subhead2 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 14px;
-  letter-spacing: 2.36px;
-  color: var(--secondary);
-}
-
-.subhead3 {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 16px;
-  letter-spacing: 2.7px;
-  color: var(--secondary);
-}
-
-.body-text {
-  color: var(--secondary);
-  font-size: 18px;
-}
-
-/*preloader style*/
+/*----------------------------preloader style-----------------------------*/
 .loader {
   position: fixed;
   top: 0;
@@ -223,11 +228,9 @@ header .close {
   align-items: center;
   z-index: 22222;
 }
-
 .loader img {
   width: 5%;
 }
-
 .disppear {
   animation: vanish 1.2s forwards;
 }
@@ -246,7 +249,7 @@ header .close {
   font-weight: bold;
 }
 
-/*home page*/
+/*-----------------------------home page----------------------------------*/
 .home {
   background-image: url('./assets/home/background-home-desktop.jpg');
   background-size: cover;
@@ -277,7 +280,6 @@ header .close {
 .btn-style {
   width: 100%;
   height: 100%;
-  background-color: red;
 }
 .explore:hover + .btn-style {
   border-radius: 50%;
@@ -292,17 +294,19 @@ header .close {
   transform: scale(1.2);
   font-size: 27px;
 }
-
+.home .content {
+  min-height: calc(100vh - 144px);
+}
 .content {
-  min-height: 81vh;
   height: 100%;
   display: flex;
   align-items: center;
   padding: 1rem 0 2rem;
   justify-content: center;
 }
-.home .head5{
+.home .head5 {
   color: var(--secondary);
+  padding-top: 4rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -323,20 +327,18 @@ header .close {
     margin: auto;
     font-size: 16px;
   }
-
   .explore {
-    height: 263px;
-    width: 263px;
-    font-size: 32px;
-    border: 15px solid transparent;
+    height: 242px;
+    width: 242px;
   }
 
-  .explore:hover {
-    height: 263px;
-    width: 263px;
-    border: 15px solid var(--gray);
-    transform: scale(1.2);
-    font-size: 30px;
+  .explore:hover + .btn-style {
+    height: 242px;
+    width: 242px;
+  }
+
+  .home .content {
+    min-height: calc(100vh - 144px);
   }
 }
 
@@ -345,38 +347,29 @@ header .close {
     background: url('./assets/home/background-home-mobile.jpg');
     background-size: cover;
   }
-
   .head1 {
     font-family: 'Bellefair', serif;
     font-size: 80px;
   }
-
   .head5 {
     font-size: 16px;
   }
-
   .explore {
     height: 150px;
     width: 150px;
     font-size: 20px;
-    border: 15px solid transparent;
   }
-
-  .explore:hover {
+  .explore:hover + .btn-style {
     height: 150px;
     width: 150px;
-    border: 15px solid var(--gray);
-    transform: scale(1.2);
-    font-size: 18px;
   }
-
   .home .body-text {
     font-size: 15px;
     width: 96%;
   }
 }
 
-/*destination page*/
+/*-----------------------------destination page-------------------------------*/
 .destination {
   background-image: url('./assets/destination/background-destination-desktop.jpg');
   background-size: cover;
@@ -442,7 +435,6 @@ header .close {
 }
 
 .destination .head5 {
-
   margin-bottom: 4rem;
 }
 
@@ -450,6 +442,11 @@ header .close {
   .destination {
     background: url('./assets/destination/background-destination-tablet.jpg');
     background-size: cover;
+  }
+  .destination .nav-tabs {
+    position: relative;
+    top: 20rem;
+    z-index: 4;
   }
 }
 @media screen and (max-width: 991px) {
@@ -464,7 +461,7 @@ header .close {
     width: 58%;
   }
   .destination .body-text {
-    width: 90%;
+    width: 83%;
     margin: auto;
     font-size: 16px;
   }
@@ -524,15 +521,16 @@ header .close {
   }
 }
 
-/*crew page*/
+/*-----------------------------------crew page--------------------------------*/
 .crew {
   background-image: url('./assets/crew/background-crew-desktop.jpg');
   background-size: cover;
   min-height: 100vh;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
-
 .carousel-item img {
   margin: 0 auto;
 }
@@ -576,8 +574,15 @@ header .close {
 }
 .crew .content {
   padding-bottom: 0;
-}
+  align-items: end;
 
+  margin-top: auto;
+}
+@media screen and (max-width: 1025px) {
+}
+.head3 {
+  font-size: 40px;
+}
 @media screen and (max-width: 768px) {
   .crew {
     background: url('./assets/crew/background-crew-tablet.jpg');
@@ -591,7 +596,7 @@ header .close {
   .crew .head4 {
     font-size: 24px;
   }
-   .head3 {
+  .head3 {
     font-size: 40px;
   }
   .crew .body-text {
@@ -599,10 +604,6 @@ header .close {
     width: 64%;
   }
 }
-
-/* .img-container::after{
-  height: 0;
-} */
 
 @media screen and (max-width: 669px) {
   .crew .body-text {
@@ -635,7 +636,7 @@ header .close {
   .crew .head4 {
     font-size: 16px;
   }
-   .head3 {
+  .head3 {
     font-size: 24px;
   }
   .crew .body-text {
@@ -663,89 +664,92 @@ header .close {
 .technology .head5 {
   margin-bottom: 4rem;
 }
-.technology .body-text{
+.technology .body-text {
   margin-top: 1.5rem;
   width: 80%;
 }
-.nav-pills{
+.nav-pills {
   gap: 2rem;
 }
-.nav-pills .nav-link{
+.nav-pills .nav-link {
   background-color: transparent;
   color: var(--white);
   border-radius: 50%;
   border: 1px solid var(--white);
-  height: 60px;
-  width: 60px;
+  height: 80px;
+  width: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 32px;
+  font-family: 'Bellefair', serif;
 }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   background-color: var(--white);
   color: var(--dark);
-
 }
-.technology .ipadimg{
+.technology .ipadimg {
   display: none;
 }
-.technology .desktopimg{
+.technology .desktopimg {
   display: block;
 }
-.technology .head5{
-  margin-left: 18.1%;
-}
+
 .tech-content {
   max-width: 1370px;
-
 }
 @media screen and (max-width: 1700px) {
-  .technology .head5{
-margin-left: 2.2%;
-  }
   .tech-content {
     width: 1108px;
-  
   }
 }
 @media screen and (max-width: 1025px) {
-  .technology .head5{
-margin-left: 0%;
+  .nav-pills .nav-link {
+    height: 58px;
+    width: 58px;
+    font-size: 24px;
   }
+
   .tech-content {
-    width:906px;
-  
+    width: 906px;
+  }
+  .body-text {
+    font-size: 16px;
+  }
+  .head5 {
+    font-size: 20px;
   }
 }
+
 @media screen and (max-width: 768px) {
   .technology {
     background: url('./assets/technology/background-technology-tablet.jpg');
     background-size: cover;
   }
-  .technology .ipadimg{
+  .technology .ipadimg {
     display: block;
     top: -5rem;
     position: relative;
   }
-  .technology .desktopimg{
+  .technology .desktopimg {
     display: none;
   }
-  .nav-pills{
+  .nav-pills {
     position: relative;
-    top: 20rem;
+    top: 21rem;
     z-index: 4;
   }
-  .tech-text{
+
+  .tech-text {
     margin-top: 4rem;
     text-align: center;
-  
   }
-  .technology .body-text{
+  .technology .body-text {
     margin: auto;
-    width: 67%;
+    width: 60%;
     font-size: 16px;
   }
-
 }
 
 @media screen and (max-width: 576px) {
@@ -753,23 +757,23 @@ margin-left: 0%;
     background: url('./assets/technology/background-technology-mobile.jpg');
     background-size: cover;
   }
-  .nav-pills{
+  .nav-pills {
     position: relative;
-    top: 8rem;
+    top: 9rem;
     z-index: 4;
   }
-  .tech-text{
-    margin-top:0;
+  .tech-text {
+    margin-top: 0;
     text-align: center;
-  
   }
-  .nav-pills .nav-link{
-    width: 30px;
-    height: 30px;
+  .nav-pills .nav-link {
+    width: 40px;
+    height: 40px;
     padding: 0;
+    font-size: 16px;
   }
-  .technology  .body-text {
-    width: 95%;
+  .technology .body-text {
+    width: 94%;
     margin: auto;
     font-size: 15px;
   }

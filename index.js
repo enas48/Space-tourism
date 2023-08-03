@@ -80,8 +80,8 @@ let crewIndicator = Data.crew.map((item, i) => {
     </div>
 
     <div class="carousel-caption text-lg-left col-lg-6 mb-5  order-md-1">
-        <h4 class="head4 mb-2">${item.name}</h4>
-        <h3 class="head3">${item.role}</h3>
+        <h4 class="head4 mb-2">${item.role}</h4>
+        <h3 class="head3">${item.name}</h3>
         <p class="body-text ml-lg-0">${item.bio}</p>
       </div>
 </div>
@@ -94,4 +94,54 @@ let crewIndicator = Data.crew.map((item, i) => {
   }
 
   /*---------------------------technology-------------------*/
-  
+  let techNavContent=Data.technology.map((item, i) => {
+    return  `<li class="nav-item">
+    <a
+      class="nav-link ${(i===0)?'active':''}"
+      id="home-tab"
+      data-toggle="tab"
+      href="#${item.name.toLowerCase()}"
+      role="tab"
+      aria-controls="${item.name.toLowerCase()}"
+      aria-selected="${(i===0)?'true':'false'}"
+      >${i+1}</a
+    >
+  </li>`
+  }).join('');
+
+  let technologyContent= Data.technology.map((item, i) => {
+    return  `   <div
+    class="tab-pane fade ${(i===0)?'show active':''}"
+    id="${item.name.toLowerCase()}"
+    role="tabpanel"
+    aria-labelledby="${item.name.toLowerCase()}-tab"
+  >
+    <div class="row align-items-center m-0">
+        <div class="col-lg-6 order-lg-6 p-0">
+            <img
+            class="img-fluid desktopimg ml-auto"
+              src="${item.images.portrait}"
+            />
+            <img
+            class="img-fluid ipadimg"
+              src="${item.images.landscape}"
+            />
+          </div>
+      <div class="col-lg-6 order-lg-1 tech-text">
+        <h3 class="subhead3">THE TERMINOLOGY…</h3>
+        <h3 class="head3 mb-3">${item.name}</h3>
+        <p class="body-text">
+       ${item.description}
+        </p>
+      </div>
+    
+    </div>
+  </div>
+    
+    `;
+  }).join('');
+
+  if ( document.URL.includes("technology.html") ) {
+    techContent.insertAdjacentHTML('beforeend', technologyContent);
+    techNav.insertAdjacentHTML('beforeend', techNavContent);
+  }
