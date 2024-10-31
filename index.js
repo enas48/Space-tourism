@@ -1,5 +1,5 @@
 
-import Data from './data.json' assert {type: 'json'};
+import Data from './data.json' with {type: 'json'};
 
 
 let loader = document.querySelector('.loader');
